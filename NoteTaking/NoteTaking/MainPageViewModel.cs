@@ -37,7 +37,9 @@ namespace NoteTaking
 
                 noteDetailsView.BindingContext = detailsVm;
 
-               await Application.Current.MainPage.Navigation.PushAsync(noteDetailsView);
+                await Application.Current.MainPage.Navigation.PushModalAsync(noteDetailsView);
+
+                SelectedNote = null;
             });
         }
 

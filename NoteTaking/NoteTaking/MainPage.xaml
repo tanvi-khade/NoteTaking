@@ -34,9 +34,11 @@
 
 
         <CollectionView 
+            x:Name="cv"
             ItemsSource="{Binding AllNotes}" 
             Grid.Row="3" Grid.ColumnSpan="2"
             SelectionMode="Single"
+            
             SelectionChangedCommand="{Binding SelectionChangedCommad}"
             SelectedItem="{Binding SelectedNote}">
             <CollectionView.ItemTemplate>

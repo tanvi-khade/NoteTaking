@@ -10,11 +10,14 @@
     <ContentPage.BindingContext>
         <local:NoteDetailsVM></local:NoteDetailsVM>
     </ContentPage.BindingContext>
-    <ContentPage.Content>
+    <ScrollView>
         <StackLayout>
-            <Label Text="{Binding Note}"
+            <Label FontSize="Header" Text="{Binding Note}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            
+            <Button Text="Dismiss" Command="{Binding DismissCommand}"></Button>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
+
 </ContentPage>
